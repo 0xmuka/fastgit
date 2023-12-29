@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Define the function to remove lazygit configuration
 remove_lazygit_config() {
     # Check the shell type and determine the configuration file
     if [ -n "$BASH_VERSION" ]; then
@@ -13,8 +14,8 @@ remove_lazygit_config() {
         exit 1
     fi
 
-    # Remove the added functions from the configuration file
-    sed -i '/# lazygit function/,/# lazygit_reload function/d' "$CONFIG_FILE"
+    # Remove the lazygit functions from the configuration file
+    sed -i.bak '/# lazygit function/,/# lazygit_reload function/d' "$CONFIG_FILE" && rm "$CONFIG_FILE.bak"
 
     echo "lazygit functions removed from $CONFIG_FILE."
 
@@ -30,4 +31,3 @@ remove_lazygit_config() {
 
 # Call the function to remove and reload
 remove_lazygit_config
-
