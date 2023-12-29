@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
 
 <body>
 
@@ -18,8 +11,15 @@
   <h3>Zsh</h3>
   <pre><code>./install-fastgit.sh</code></pre>
 
-  <h3>PowerShell</h3>
-  <pre><code>.\install-fastgit.ps1</code></pre>
+  <h2>Using FastGit</h2>
+
+  <p>To utilize the <code>fastgit</code> function, follow these simple steps:</p>
+
+  <h3>1. Execute FastGit:</h3>
+
+  <p>After installation, you can use the <code>fastgit</code> function by providing a commit message. For example:</p>
+
+  <pre><code>fastgit "My commit message"</code></pre>
 
   <h2>Removal</h2>
 
@@ -29,14 +29,5 @@
   <h3>Zsh</h3>
   <pre><code>./remove-fastgit.sh</code></pre>
 
-  <h3>PowerShell</h3>
-  <pre><code>.\remove-fastgit.ps1</code></pre>
-
-  <p><strong>Note:</strong> Reload your shell after installation or removal.</p>
-
-  <pre><code>bash<br>zsh<br>. $PROFILE  # For PowerShell</code></pre>
-
 </body>
-
-</html>
 
