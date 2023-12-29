@@ -30,7 +30,7 @@ The purpose of this function is to simplify and expedite common Git operations s
   <pre><code>./install-fastgit.sh</code></pre>
 
   <h3>Zsh</h3>
-  <pre><code>./install-fastgit.sh</code></pre>
+  <pre><code>zsh install-fastgit.sh</code></pre>
 
   <h2>Using FastGit</h2>
 
@@ -48,7 +48,7 @@ The purpose of this function is to simplify and expedite common Git operations s
   <pre><code>./remove-fastgit.sh</code></pre>
 
   <h3>Zsh</h3>
-  <pre><code>./remove-fastgit.sh</code></pre>
+  <pre><code>zsh remove-fastgit.sh</code></pre>
 
 </body>
 
