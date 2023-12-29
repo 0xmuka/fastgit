@@ -46,9 +46,10 @@ The purpose of this function is to simplify and expedite common Git operations s
 
   <h3>Bash</h3>
   <pre><code>./remove-fastgit.sh</code></pre>
-
+  <pre><code>source ~/.bashrc</code></pre>
+  
   <h3>Zsh</h3>
   <pre><code>zsh remove-fastgit.sh</code></pre>
-
+  <pre><code>source ~/.zshrc</code></pre>
 </body>
 
