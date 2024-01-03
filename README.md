@@ -43,7 +43,9 @@ The purpose of this function is to simplify and expedite common Git operations s
   <pre><code>fastgit "My commit message"</code></pre>
 
   <h2>Removal</h2>
-
+  
+  <pre><code>cd fastgit</code></pre>
+  
   <h3>Bash</h3>
   <pre><code>./remove-fastgit.sh</code></pre>
   <pre><code>source ~/.bashrc</code></pre>
