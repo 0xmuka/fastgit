@@ -8,7 +8,7 @@ The FastGit tool has a function that facilitates the execution of Git commands q
    - The command checks if you are inside a Git repository or not.
 
 2. **Add changes:**
-   - If you are inside a Git repository, all staged changes are added using `git add ..`.
+   - If you are inside a Git repository, all staged changes are added using `git add .`
 
 3. **Perform the commit operation:**
    - `git commit -a -m "$1"` is executed to commit the changes with the provided message as the commit message.
