@@ -38,12 +38,7 @@ ${TOOL_NAME}() {
 
     echo \"Not a Git repository. Skipping Git operations.\"
 }
-
-# ${TOOL_NAME}_reload function
-${TOOL_NAME}_reload() {
-    source \"\$CONFIG_FILE\"
-    echo \"Shell configuration reloaded.\"
-}"
+"
 
 # Append the function definition to the configuration file
 echo "$FASTGIT_FUNCTION" >> "$CONFIG_FILE"
