@@ -24,13 +24,19 @@ ${TOOL_NAME}() {
         return 1
     fi
 
-    if [ -d .git ]; then
-        git add .
-        git commit -a -m \"\$1\"
-        git push
-    else
-        echo \"Not a Git repository. Skipping Git operations.\"
-    fi
+    # Look for the .git directory in the current or parent directories
+    current_dir=\$(pwd)
+    while [ \"\$current_dir\" != \"/\" ]; do
+        if [ -d \"\$current_dir/.git\" ]; then
+            git -C \"\$current_dir\" add .
+            git -C \"\$current_dir\" commit -a -m \"\$1\"
+            git -C \"\$current_dir\" push
+            return 0
+        fi
+        current_dir=\$(dirname \"\$current_dir\")
+    done
+
+    echo \"Not a Git repository. Skipping Git operations.\"
 }
 
 # ${TOOL_NAME}_reload function
@@ -44,4 +50,3 @@ echo "$FASTGIT_FUNCTION" >> "$CONFIG_FILE"
 
 # Inform the user about the changes
 echo "${TOOL_NAME} function added to $CONFIG_FILE. Please reload your shell."
-
